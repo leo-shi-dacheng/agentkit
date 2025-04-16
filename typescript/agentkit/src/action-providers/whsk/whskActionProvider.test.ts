@@ -7,7 +7,7 @@ import { whskActionProvider } from "./whskActionProvider";
 const MOCK_AMOUNT = "15";
 const MOCK_ADDRESS = "0x1234567890123456789012345678901234543210";
 
-describe("Wrap Eth Schema", () => {
+describe("Wrap Hsk Schema", () => {
   it("should successfully parse valid input", () => {
     const validInput = {
       amountToWrap: MOCK_AMOUNT,
@@ -27,7 +27,7 @@ describe("Wrap Eth Schema", () => {
   });
 });
 
-describe("Wrap Eth Action", () => {
+describe("Wrap Hsk Action", () => {
   let mockWallet: jest.Mocked<EvmWalletProvider>;
   const actionProvider = whskActionProvider();
 
@@ -57,7 +57,7 @@ describe("Wrap Eth Action", () => {
       }),
       value: BigInt(MOCK_AMOUNT),
     });
-    expect(response).toContain(`Wrapped ETH with transaction hash: ${hash}`);
+    expect(response).toContain(`Wrapped HSK with transaction hash: ${hash}`);
   });
 
   it("should fail with an error", async () => {
@@ -65,7 +65,7 @@ describe("Wrap Eth Action", () => {
       amountToWrap: MOCK_AMOUNT,
     };
 
-    const error = new Error("Failed to wrap ETH");
+    const error = new Error("Failed to wrap HSK");
     mockWallet.sendTransaction.mockRejectedValue(error);
 
     const response = await actionProvider.wrapHsk(mockWallet, args);
@@ -79,7 +79,7 @@ describe("Wrap Eth Action", () => {
       value: BigInt(MOCK_AMOUNT),
     });
 
-    expect(response).toContain(`Error wrapping ETH: ${error}`);
+    expect(response).toContain(`Error wrapping HSK: ${error}`);
   });
 });
 
@@ -105,7 +105,7 @@ describe("supportsNetwork", () => {
   it("should return false for non-hashkey networks", () => {
     const result = actionProvider.supportsNetwork({
       protocolFamily: "evm",
-      networkId: "ethereum-mainnet",
+      networkId: "Hskereum-mainnet",
     });
     expect(result).toBe(false);
   });
