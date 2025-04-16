@@ -1,6 +1,5 @@
 # 要做的大模块
-## cdp
-
+## cdp ```P1```
 ## erc20  ```P0```
 - get_balance
 - transfer ???
@@ -9,13 +8,13 @@
 - get_balance
 - mint
 - transfer
-## twitter
+## twitter ```done```
 ## wallet ```P0```
 ## whsk ```P1```
 ## wow ```P1```
 - 部署脚本已经完成
 - 测试网已经部署
-
+- 其中的 uinswap 主网还没部署
 ## analytics 不支持
 
 ------------------
@@ -39,3 +38,22 @@
 - 执行交易与读取合约（createTrade、readContract）
 - Gasless 方式的 ERC20 转账（gaslessERC20Transfer）
 - 导出并获取钱包（exportWallet、getWallet）
+
+## 目前只支持 typescript, 还不支持 python
+## 目前很多功能只支持 testnet 
+
+修改 @coinbase/agentkit 为 @hashkey/agentkit
+全局替换
+
+@coinbase/agentkit-langchain 这个库在哪里
+
+
+## 其他相关库
+```coinbase-sdk-nodejs```: https://github.com/coinbase/coinbase-sdk-nodejs
+```cdp-sdk```: https://github.com/coinbase/cdp-sdk
+
+
+# 发布部署 npm 包
+## @coinbase/agentkit 需要部署
+## @coinbase/agentkit-langchain 目前还不用
+## @coinbase/agentkit-model-context-protocol 目前还不用

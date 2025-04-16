@@ -1,9 +1,9 @@
 {
-  "name": "@coinbase/agentkit",
-  "description": "Coinbase AgentKit core primitives",
-  "repository": "https://github.com/coinbase/agentkit",
+  "name": "@hashkey/agentkit",
+  "description": "Hashkey AgentKit core primitives",
+  "repository": "https://github.com/leo-shi-dacheng/hashkey-agentkit",
   "version": "0.6.2",
-  "author": "Coinbase Inc.",
+  "author": "Hashkey Inc.",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,7 +28,7 @@
     "generate:action-provider": "tsx ./scripts/generate-action-provider/main.ts"
   },
   "keywords": [
-    "coinbase",
+    "hashkey",
     "sdk",
     "crypto",
     "cdp",

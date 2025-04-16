@@ -17,7 +17,7 @@
     "lint:fix": "turbo run lint:fix",
     "test:types": "turbo run test:types"
   },
-  "author": "Coinbase Inc.",
+  "author": "Hashkey Inc.",
   "license": "Apache-2.0",
   "repository": "https://github.com/coinbase/agentkit",
   "publishConfig": {

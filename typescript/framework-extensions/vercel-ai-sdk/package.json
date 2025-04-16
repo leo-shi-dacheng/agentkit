@@ -1,9 +1,9 @@
 {
-  "name": "@coinbase/agentkit-vercel-ai-sdk",
+  "name": "@hashkey/agentkit-vercel-ai-sdk",
   "version": "0.1.0",
   "description": "Vercel AI SDK extension of CDP Agentkit",
   "repository": "https://github.com/coinbase/agentkit",
-  "author": "Coinbase Inc.",
+  "author": "Hashkey Inc.",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,10 +42,10 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@coinbase/agentkit": "workspace:*"
+    "@hashkey/agentkit": "workspace:*"
   },
   "peerDependencies": {
-    "@coinbase/agentkit": ">=0.1.0",
+    "@hashkey/agentkit": ">=0.1.0",
     "ai": "^4.1.16"
   }
 }

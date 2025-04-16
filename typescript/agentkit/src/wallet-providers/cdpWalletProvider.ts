@@ -169,7 +169,7 @@ export class CdpWalletProvider extends EvmWalletProvider {
         wallet = await Wallet.import(walletData);
         networkId = wallet.getNetworkId();
       } else if (mnemonicPhrase) {
-        wallet = await Wallet.import({ mnemonicPhrase: mnemonicPhrase }, networkId);
+        wallet = await Wallet.import({ mnemonicPhrase: mnemonicPhrase }, 'base-sepolia');
       } else {
         wallet = await Wallet.create({ networkId: networkId });
       }

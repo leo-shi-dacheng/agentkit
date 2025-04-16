@@ -1,9 +1,9 @@
 {
-  "name": "@coinbase/cdp-vercel-ai-sdk-chatbot-example",
+  "name": "@hashkey/cdp-vercel-ai-sdk-chatbot-example",
   "description": "CDP Agentkit Vercel AI SDK Chatbot Example",
   "version": "1.0.0",
   "private": true,
-  "author": "Coinbase Inc.",
+  "author": "Hashkey Inc.",
   "license": "Apache-2.0",
   "scripts": {
     "start": "NODE_OPTIONS='--no-warnings' ts-node ./chatbot.ts",
@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.1.9",
-    "@coinbase/agentkit": "workspace:*",
-    "@coinbase/agentkit-vercel-ai-sdk": "workspace:*",
+    "@hashkey/agentkit": "workspace:*",
+    "@hashkey/agentkit-vercel-ai-sdk": "workspace:*",
     "ai": "^4.1.16",
     "dotenv": "^16.4.5",
     "tsx": "^4.7.1",

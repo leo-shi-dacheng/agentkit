@@ -1,9 +1,9 @@
 {
-  "name": "@coinbase/agentkit-model-context-protocol",
+  "name": "@hashkey/agentkit-model-context-protocol",
   "version": "0.2.0",
-  "description": "Model Context Protocol Extension of Coinbase Agentkit",
+  "description": "Model Context Protocol Extension of Hashkey AgentKit",
   "repository": "https://github.com/coinbase/agentkit",
-  "author": "Coinbase Inc.",
+  "author": "Hashkey Inc.",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -44,9 +44,9 @@
     "zod-to-json-schema": "^3.24.3"
   },
   "devDependencies": {
-    "@coinbase/agentkit": "workspace:*"
+    "@hashkey/agentkit": "workspace:*"
   },
   "peerDependencies": {
-    "@coinbase/agentkit": ">=0.1.0"
+    "@hashkey/agentkit": ">=0.1.0"
   }
 }
