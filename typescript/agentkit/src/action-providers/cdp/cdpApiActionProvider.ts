@@ -44,7 +44,7 @@ export class CdpApiActionProvider extends ActionProvider<WalletProvider> {
     description: `
 This tool checks the reputation of an address on a given network. It takes:
 
-- network: The network to check the address on (e.g. "base-mainnet")
+- network: The network to check the address on (e.g. "hashkey-mainnet")
 - address: The Ethereum address to check
 `,
     schema: AddressReputationSchema,

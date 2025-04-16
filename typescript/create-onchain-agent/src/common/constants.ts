@@ -15,6 +15,8 @@ export const EVM_NETWORKS = [
   "optimism-sepolia",
   "polygon-mainnet",
   "polygon-mumbai",
+  "hashkey-mainnet",
+  "hashkey-testnet",
 ] as const;
 
 export type EVMNetwork = (typeof EVM_NETWORKS)[number];
@@ -48,6 +50,8 @@ export const NetworkToWalletProviders: Record<Network, readonly WalletProviderCh
   "solana-mainnet": SVM_WALLET_PROVIDERS,
   "solana-devnet": SVM_WALLET_PROVIDERS,
   "solana-testnet": SVM_WALLET_PROVIDERS,
+  "hashkey-mainnet": CDP_SUPPORTED_EVM_WALLET_PROVIDERS,
+  "hashkey-testnet": NON_CDP_SUPPORTED_EVM_WALLET_PROVIDERS,
 };
 
 export const Networks: Network[] = [...EVM_NETWORKS, ...SVM_NETWORKS];

@@ -1,6 +1,6 @@
 import type { Abi } from "abitype";
 
-export const SUPPORTED_NETWORKS = ["base-mainnet", "base-sepolia"];
+export const SUPPORTED_NETWORKS = ["base-mainnet", "base-sepolia", "hashkey-testnet", "hashkey-mainnet"];
 
 export const WOW_FACTORY_ABI: Abi = [
   {
@@ -805,6 +805,8 @@ export const WOW_ABI: Abi = [
 export const WOW_FACTORY_CONTRACT_ADDRESSES: Record<string, string> = {
   "base-sepolia": "0x04870e22fa217Cb16aa00501D7D5253B8838C1eA",
   "base-mainnet": "0x997020E5F59cCB79C74D527Be492Cc610CB9fA2B",
+  "hashkey-testnet": "0x997020E5F59cCB79C74D527Be492Cc610CB9fA2B",
+  "hashkey-mainnet": "0x997020E5F59cCB79C74D527Be492Cc610CB9fA2B",
 };
 
 export const ADDRESSES: Record<string, Record<string, string>> = {
@@ -827,6 +829,26 @@ export const ADDRESSES: Record<string, Record<string, string>> = {
     SwapRouter02: "0x2626664c2603336E57B271c5C0b26F421741e481",
     WETH: "0x4200000000000000000000000000000000000006",
     UniswapQuoter: "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+  },
+  "hashkey-testnet": {
+    WowFactory: "0x997020E5F59cCB79C74D527Be492Cc610CB9fA2B", // 需要替换为实际部署的工厂合约地址
+    WowFactoryImpl: "0xe4c17055048aEe01D0d122804816fEe5E6ac4A67", // 需要替换为实际部署的实现合约地址
+    Wow: "0x293997C6a1f2A1cA3aB971f548c4D95585E46282", // 需要替换为实际部署的 Wow 合约地址
+    BondingCurve: "0x264ece5D58A576cc775B719bf182F2946076bE78", // 需要替换为实际部署的 BondingCurve 合约地址
+    NonfungiblePositionManager: "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1", // Hashkey 上的 Uniswap NFT Position Manager 地址
+    SwapRouter02: "0x2626664c2603336E57B271c5C0b26F421741e481", // Hashkey 上的 Uniswap Router 地址
+    WETH: "0x4200000000000000000000000000000000000006", // Hashkey 的 WETH 地址
+    UniswapQuoter: "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a", // Hashkey 上的 Uniswap Quoter 地址
+  },
+  "hashkey-mainnet": {
+    WowFactory: "0x997020E5F59cCB79C74D527Be492Cc610CB9fA2B", // 需要替换为实际部署的工厂合约地址
+    WowFactoryImpl: "0xe4c17055048aEe01D0d122804816fEe5E6ac4A67", // 需要替换为实际部署的实现合约地址
+    Wow: "0x293997C6a1f2A1cA3aB971f548c4D95585E46282", // 需要替换为实际部署的 Wow 合约地址
+    BondingCurve: "0x264ece5D58A576cc775B719bf182F2946076bE78", // 需要替换为实际部署的 BondingCurve 合约地址
+    NonfungiblePositionManager: "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1", // Hashkey 上的 Uniswap NFT Position Manager 地址
+    SwapRouter02: "0x2626664c2603336E57B271c5C0b26F421741e481", // Hashkey 上的 Uniswap Router 地址
+    WETH: "0x4200000000000000000000000000000000000006", // Hashkey 的 WETH 地址
+    UniswapQuoter: "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a", // Hashkey 上的 Uniswap Quoter 地址
   },
 };
 

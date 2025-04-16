@@ -162,6 +162,8 @@ describe("WowActionProvider", () => {
     const testCases = [
       { network: { protocolFamily: "evm", networkId: "base-mainnet" }, expected: true },
       { network: { protocolFamily: "evm", networkId: "base-sepolia" }, expected: true },
+      { network: { protocolFamily: "evm", networkId: "hashkey-mainnet" }, expected: true },
+      { network: { protocolFamily: "evm", networkId: "hashkey-testnet" }, expected: true },
       { network: { protocolFamily: "evm", networkId: "ethereum" }, expected: false },
       { network: { protocolFamily: "evm", networkId: "optimism" }, expected: false },
       { network: { protocolFamily: "bitcoin", networkId: "base-mainnet" }, expected: false },

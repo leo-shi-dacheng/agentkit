@@ -3,7 +3,7 @@ import { ActionProvider } from "../actionProvider";
 import { Network } from "../../network";
 import { CreateAction } from "../actionDecorator";
 import { GetBalanceSchema, TransferSchema } from "./schemas";
-import { abi, BaseTokenToAssetId, BaseSepoliaTokenToAssetId } from "./constants";
+import { abi, BaseTokenToAssetId, BaseSepoliaTokenToAssetId, HashKeyMainnetTokenToAssetId, HashKeyTestnetTokenToAssetId } from "./constants";
 import { encodeFunctionData, formatUnits, Hex, getAddress } from "viem";
 import { EvmWalletProvider, CdpWalletProvider } from "../../wallet-providers";
 
@@ -92,16 +92,26 @@ Important notes:
 
       const canDoGasless =
         isCdpWallet &&
-        ((network.networkId === "base-mainnet" && BaseTokenToAssetId.has(tokenAddress)) ||
-          (network.networkId === "base-sepolia" && BaseSepoliaTokenToAssetId.has(tokenAddress)));
+        (
+          (network.networkId === "base-mainnet" && BaseTokenToAssetId.has(tokenAddress)) ||
+          (network.networkId === "base-sepolia" && BaseSepoliaTokenToAssetId.has(tokenAddress)) ||
+          (network.networkId === "hashkey-mainnet" && HashKeyMainnetTokenToAssetId.has(tokenAddress)) ||
+          (network.networkId === "hashkey-testnet" && HashKeyTestnetTokenToAssetId.has(tokenAddress))
+        );
 
       if (canDoGasless) {
         // Cast to CdpWalletProvider to access erc20Transfer
         const cdpWallet = walletProvider as CdpWalletProvider;
-        const assetId =
-          network.networkId === "base-mainnet"
-            ? BaseTokenToAssetId.get(tokenAddress)!
-            : BaseSepoliaTokenToAssetId.get(tokenAddress)!;
+        let assetId;
+        if (network.networkId === "base-mainnet") {
+          assetId = BaseTokenToAssetId.get(tokenAddress)!;
+        } else if (network.networkId === "base-sepolia") {
+          assetId = BaseSepoliaTokenToAssetId.get(tokenAddress)!;
+        } else if (network.networkId === "hashkey-mainnet") {
+          assetId = HashKeyMainnetTokenToAssetId.get(tokenAddress)!;
+        } else if (network.networkId === "hashkey-testnet") {
+          assetId = HashKeyTestnetTokenToAssetId.get(tokenAddress)!;
+        }
         const hash = await cdpWallet.gaslessERC20Transfer(
           assetId,
           args.destination as Hex,

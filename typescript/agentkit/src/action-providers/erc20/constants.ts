@@ -200,3 +200,13 @@ export const BaseSepoliaTokenToAssetId = new Map([
   ["0x036CbD53842c5426634e7929541eC2318f3dCF7e", Coinbase.assets.Usdc],
   ["0x808456652fdb597867f38412077A9182bf77359F", Coinbase.assets.Eurc],
 ]);
+
+export const HashKeyMainnetTokenToAssetId = new Map([
+  // https://hashkey.blockscout.com/token/0xF1B50eD67A9e2CC94Ad3c477779E2d4cBfFf9029
+  // ["0xF1B50eD67A9e2CC94Ad3c477779E2d4cBfFf9029", Coinbase.assets.Usdt],
+  ["0xF1B50eD67A9e2CC94Ad3c477779E2d4cBfFf9029", Coinbase.assets.Usdc],
+]);
+
+export const HashKeyTestnetTokenToAssetId = new Map([
+  ["0xF1B50eD67A9e2CC94Ad3c477779E2d4cBfFf9029", Coinbase.assets.Usdc],
+]);

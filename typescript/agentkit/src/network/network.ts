@@ -10,6 +10,8 @@ import {
   optimism,
   polygonMumbai,
   polygon,
+  hashkey,
+  hashkeyTestnet,
 } from "viem/chains";
 import * as chains from "viem/chains";
 
@@ -27,6 +29,8 @@ export const CHAIN_ID_TO_NETWORK_ID: Record<number, string> = {
   421614: "arbitrum-sepolia",
   10: "optimism-mainnet",
   11155420: "optimism-sepolia",
+  177: "hashkey-mainnet",
+  133: "hashkey-testnet",
 };
 
 /**
@@ -56,6 +60,8 @@ export const NETWORK_ID_TO_VIEM_CHAIN: Record<string, Chain> = {
   "arbitrum-sepolia": arbitrumSepolia,
   "optimism-mainnet": optimism,
   "optimism-sepolia": optimismSepolia,
+  "hashkey-mainnet": hashkey,
+  "hashkey-testnet": hashkeyTestnet,
 };
 
 /**

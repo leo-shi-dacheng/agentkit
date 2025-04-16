@@ -51,7 +51,9 @@ Important notes:
 - Minimum purchase amount is 100000000000000 wei (0.0000001 ETH)
 - Only supported on the following networks:
   - Base Sepolia (ie, 'base-sepolia')
-  - Base Mainnet (ie, 'base', 'base-mainnet')`,
+  - Base Mainnet (ie, 'base', 'base-mainnet')
+  - Hashkey Testnet (ie, 'hashkey', 'hashkey-testnet')
+  - Hashkey Mainnet (ie, 'hashkey', 'hashkey-mainnet')`,
     schema: WowBuyTokenInput,
   })
   async buyToken(
@@ -120,7 +122,9 @@ Important notes:
 - Uses a bonding curve - no upfront liquidity needed
 - Only supported on the following networks:
   - Base Sepolia (ie, 'base-sepolia')
-  - Base Mainnet (ie, 'base', 'base-mainnet')`,
+  - Base Mainnet (ie, 'base', 'base-mainnet')
+  - Hashkey Testnet (ie, 'hashkey', 'hashkey-testnet')
+  - Hashkey Mainnet (ie, 'hashkey', 'hashkey-mainnet')`,
     schema: WowCreateTokenInput,
   })
   async createToken(
@@ -181,7 +185,9 @@ Important notes:
 - Minimum purchase amount is 100000000000000 wei (0.0000001 ETH)
 - Only supported on the following networks:
   - Base Sepolia (ie, 'base-sepolia')
-  - Base Mainnet (ie, 'base', 'base-mainnet')`,
+  - Base Mainnet (ie, 'base', 'base-mainnet')
+  - Hashkey Testnet (ie, 'hashkey', 'hashkey-testnet')
+  - Hashkey Mainnet (ie, 'hashkey', 'hashkey-mainnet')`,
     schema: WowSellTokenInput,
   })
   async sellToken(
