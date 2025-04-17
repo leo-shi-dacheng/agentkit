@@ -1,5 +1,5 @@
 {
-  "name": "@hashkey/agentkit",
+  "name": "@hashkeychain/agentkit",
   "description": "Hashkey AgentKit core primitives",
   "repository": "https://github.com/leo-shi-dacheng/hashkey-agentkit",
   "version": "0.6.2",
