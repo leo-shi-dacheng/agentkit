@@ -1,5 +1,5 @@
 {
-  "name": "@hashkey/agentkit-vercel-ai-sdk",
+  "name": "@hashkeychain/agentkit-vercel-ai-sdk",
   "version": "0.1.0",
   "description": "Vercel AI SDK extension of CDP Agentkit",
   "repository": "https://github.com/coinbase/agentkit",
@@ -42,10 +42,10 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@hashkey/agentkit": "workspace:*"
+    "@hashkeychain/agentkit": "workspace:*"
   },
   "peerDependencies": {
-    "@hashkey/agentkit": ">=0.1.0",
+    "@hashkeychain/agentkit": ">=0.1.0",
     "ai": "^4.1.16"
   }
 }

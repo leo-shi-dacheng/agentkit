@@ -2,7 +2,7 @@
   "name": "@hashkeychain/agentkit",
   "description": "Hashkey AgentKit core primitives",
   "repository": "https://github.com/leo-shi-dacheng/hashkey-agentkit",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "author": "Hashkey Inc.",
   "license": "Apache-2.0",
   "main": "dist/index.js",
@@ -55,7 +55,7 @@
     "opensea-js": "^7.1.18",
     "reflect-metadata": "^0.2.2",
     "twitter-api-v2": "^1.18.2",
-    "viem": "^2.22.16",
+    "viem": "^2.27.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {

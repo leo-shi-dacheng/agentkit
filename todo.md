@@ -42,7 +42,7 @@
 ## 目前只支持 typescript, 还不支持 python
 ## 目前很多功能只支持 testnet 
 
-修改 @coinbase/agentkit 为 @hashkey/agentkit
+修改 @coinbase/agentkit 为 @hashkeychain/agentkit
 全局替换
 
 @coinbase/agentkit-langchain 这个库在哪里

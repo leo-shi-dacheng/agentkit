@@ -11,7 +11,7 @@ const PROTOCOL_FAMILY_TO_TERMINOLOGY: Record<
   string,
   { unit: string; displayUnit: string; type: string; verb: string }
 > = {
-  evm: { unit: "WEI", displayUnit: "ETH", type: "Transaction hash", verb: "transaction" },
+  evm: { unit: "WEI", displayUnit: "HSK", type: "Transaction hash", verb: "transaction" },
   svm: { unit: "LAMPORTS", displayUnit: "SOL", type: "Signature", verb: "transfer" },
 };
 
@@ -86,7 +86,7 @@ export class WalletActionProvider extends ActionProvider {
 This tool will transfer native tokens from the wallet to another onchain address.
 
 It takes the following inputs:
-- amount: The amount to transfer in whole units (e.g. 1 ETH, 0.1 SOL)
+- amount: The amount to transfer in whole units (e.g. 1 HSK, 0.1 SOL)
 - destination: The address to receive the funds
 
 Important notes:
