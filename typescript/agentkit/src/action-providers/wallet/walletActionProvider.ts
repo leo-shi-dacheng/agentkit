@@ -41,7 +41,7 @@ export class WalletActionProvider extends ActionProvider {
     This tool will return the details of the connected wallet including:
     - Wallet address
     - Network information (protocol family, network ID, chain ID)
-    - Native token balance (ETH for EVM networks, SOL for Solana networks)
+    - Native token balance (ETH for EVM networks, HSK for Hashkey networks)
     - Wallet provider name
     `,
     schema: GetWalletDetailsSchema,

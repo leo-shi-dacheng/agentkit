@@ -131,6 +131,7 @@ export class CdpWalletProvider extends EvmWalletProvider {
       chain: NETWORK_ID_TO_VIEM_CHAIN[config.network!.networkId!],
       transport: http(),
     });
+
     this.#gasLimitMultiplier = Math.max(config.gas?.gasLimitMultiplier ?? 1.2, 1);
     this.#feePerGasMultiplier = Math.max(config.gas?.feePerGasMultiplier ?? 1, 1);
   }
@@ -419,9 +420,15 @@ export class CdpWalletProvider extends EvmWalletProvider {
     if (!this.#cdpWallet) {
       throw new Error("Wallet not initialized");
     }
-
-    const balance = await this.#cdpWallet.getBalance("eth");
-    return BigInt(balance.mul(10 ** 18).toString());
+    // 这里应该修改成hsk
+    // const balance = await this.#cdpWallet.getBalance("eth");
+    // const balance = await this.#cdpWallet.getBalance("hsk");
+    const balance = await this.#publicClient!.getBalance({
+      address: this.#address! as `0x${string}`,
+      blockTag: "latest",
+    });
+    // return BigInt(balance.mul(10 ** 18).toString());
+    return BigInt(balance.toString());
   }
 
   /**

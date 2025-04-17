@@ -25,7 +25,7 @@
 ## viemWalletProvider ```P1```
 基于 viem（一个轻量级的 EVM RPC 库）实现的具体 EVM 钱包提供器，继承自 ```evmWalletProvider```。它内部会用 viem 的 WalletClient、PublicClient 等完成签名、发送交易、合约调用、获取交易回执等操作
 ## cdpWalletProvider
-基于 Coinbase SDK 的“Smart Wallet”实现，继承自 ```evmWalletProvider```，但内部使用了 Coinbase 提供的 createSmartWallet、User Operation 等智能账户功能
+基于 Coinbase SDK 的“Smart Wallet”实现，继承自 ```evmWalletProvider``
 ## smartWalletProvider
 基于 Coinbase SDK 的“Smart Wallet”实现，继承自 ```evmWalletProvider```，但内部使用了 Coinbase 提供的 createSmartWallet、User Operation 等智能账户功能
 ----------
